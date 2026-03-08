@@ -25,7 +25,45 @@ header img {
 .header-info {
     background-color: #004aad;
     color: white;
-    padding: 15px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-text{
+    max-width:70%;
+}
+
+.agent-photo{
+    position:relative;
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    border:4px solid #1da1f2;
+    overflow:hidden;
+}
+
+.agent-photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.verify-badge{
+    position:absolute;
+    bottom:5px;
+    right:5px;
+    background:#1da1f2;
+    color:white;
+    width:28px;
+    height:28px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:16px;
+    border:2px solid white;
 }
 
 section {
@@ -83,93 +121,75 @@ function toggleDetails(id) {
 <body>
 
 <header>
-    <img src="bajaj-life-logo1.jpg" alt="Bajaj Life Logo">
+<img src="bajaj-life-logo1.jpg">
 </header>
 
 <div class="header-info">
-    <h1>Agent- Suraj Rajbhar</h1>
-    <h>Mumbai-U1-Dombivli-Branch</h>
-    <p>Authorized Insurance Advisor</p>
-    <p>Dombivli | 📞 8928069993 | 💬 WhatsApp Available | ✉️ officialsurajbhai121@gmail.com</p>
+
+<div class="header-text">
+<h1>Agent - Suraj Rajbhar</h1>
+<p>Mumbai-U1-Dombivli-Branch</p>
+<p>Authorized Insurance Advisor</p>
+<p>Dombivli | 📞 8928069993 | 💬 WhatsApp Available | ✉️ officialsurajbhai121@gmail.com</p>
+</div>
+
+<div class="agent-photo">
+<img src="suraj.jpg">
+<div class="verify-badge">✔</div>
+</div>
+
 </div>
 
 <section>
 <h2>Our Insurance Services</h2>
 
+<!-- ULIP -->
 <div class="card" onclick="toggleDetails('life')">
-<h3>Bajaj Life ULIP/SIP</h3>
+<h3>Bajaj Life ULIP / SIP</h3>
 <p>Click to view full details</p>
 
 <div id="life" class="details">
 <ul>
-<h1>आप हर महीने ₹2000 या ₹3000 invest करते हैं।
-यह पैसा market में invest होता है और साथ में insurance cover भी मिलता है।”
+<li><b>ULIP kya hai?</b> Ye plan Insurance + Investment dono provide karta hai.</li>
 
-Minimum Investment
+<li><b>Example:</b> Agar koi ₹3000 per month 20 saal invest karta hai to approx ₹12-20 lakh tak fund ban sakta hai.</li>
 
-आमतौर पर:
-
-₹2000 per month (minimum)
-
-या ₹24000 per year
-
-Example (Customer को समझाने के लिए)
-
-मान लीजिए:
-
-Investment: ₹2000 महीना
-
-Time: 20 साल
-
-आपका total invest =
-₹2000 × 12 × 20 = ₹4,80,000
-
-अगर average return 10–12% आता है तो maturity पर लगभग
-
-👉 ₹12 लाख – ₹15 लाख तक मिल सकते हैं
-
-और बीच में अगर death हो जाए तो
-👉 Insurance cover भी मिलता है।</h1>
+<li><b>Benefits:</b></li>
+<li>Life insurance protection</li>
+<li>Long term wealth creation</li>
+<li>Tax benefit under 80C</li>
+<li>Future financial goals complete karne me help</li>
 </ul>
+
 <a class="btn" href="https://wa.me/918928069993">Enquire Now</a>
 </div>
 </div>
 
+<!-- LIFE INSURANCE -->
 <div class="card" onclick="toggleDetails('health')">
 <h3>Life Insurance</h3>
 <p>Click to view full details</p>
 
 <div id="health" class="details">
 <ul>
-<h1>सबसे आसान Example
+<li><b>Life Insurance kya hai?</b> Policy holder ko kuch ho jane par family ko financial support milta hai.</li>
 
-मान लीजिए:
+<li><b>Example:</b> Agar ₹1000 monthly premium par ₹10 lakh cover liya ho aur future me death ho jaye to family ko ₹10 lakh milte hain.</li>
 
-एक आदमी हर महीने ₹800 जमा करता है
-
-वह ₹1 करोड़ का life insurance लेता है
-
-अगर उस व्यक्ति को कुछ हो जाता है तो
-
-👉 उसकी family को ₹1 करोड़ मिलते हैं
-
-ताकि
-
-बच्चों की पढ़ाई
-
-घर का खर्च
-
-family का future
-
-सुरक्षित रहे।<h1>
-<
+<li><b>Benefits:</b></li>
+<li>Family financial security</li>
+<li>Low premium high cover</li>
+<li>Tax saving benefit</li>
+<li>Peace of mind</li>
 </ul>
+
 <a class="btn" href="https://wa.me/918928069993">Enquire Now</a>
 </div>
 </div>
 
+<!-- COMING SOON -->
 <div class="card" onclick="toggleDetails('ulip')">
-<h3>Comming Soon</h3>
+<h3>Investment Plans (Coming Soon)</h3>
 <p>Click to view full details</p>
 
 <div id="ulip" class="details">
@@ -179,72 +199,51 @@ family का future
 <li>Long Term Wealth Growth</li>
 <li>Life Cover Included</li>
 </ul>
+
 <a class="btn" href="https://wa.me/918928069993">Enquire Now</a>
 </div>
 </div>
 
+<!-- CHILD PLAN -->
 <div class="card" onclick="toggleDetails('child')">
-<h3>Child Future Plans(Goal Shuraksha)</h3>
+<h3>Child Future Plan (Goal Suraksha)</h3>
 <p>Click to view full details</p>
 
 <div id="child" class="details">
 <ul>
-<li>Education Planning</li>
-<li>Secure Future Planning <h1> 1️⃣ Bajaj Goal Suraksha Plan क्या है
+<li><b>Child plan kya hai?</b> Ye bachche ki education aur future planning ke liye saving plan hota hai.</li>
 
-यह एक Term Insurance Plan है
+<li><b>Example:</b> Agar parent ₹2500 monthly 15 saal invest kare to approx ₹8-12 lakh fund ban sakta hai.</li>
 
-कम premium में high life cover मिलता है
-
-Policy holder की death होने पर nominee को पूरा sum assured मिलता है
-
-Policy खत्म होने पर आमतौर पर पैसा वापस नहीं मिलता (pure term plan)
-
-2️⃣ Minimum Investment (लगभग)
-
-Minimum premium company, age और cover पर depend करता है। लेकिन example से समझिए:
-
-Example 1
-
-Age: 25 साल
-
-Cover: ₹50 लाख
-
-Policy term: 20 साल
-
-👉 Premium लगभग ₹500 – ₹700 / महीना
-
-अगर death हो जाती है
-➡️ Nominee को ₹50 लाख
-
-Example 2
-
-Age: 30 साल
-
-Cover: ₹1 करोड़
-
-Policy term: 25 साल
-
-👉 Premium लगभग ₹900 – ₹1200 / महीना
-
-अगर death हो जाती है
-➡️ Nominee को ₹1 करोड़</h1></li>
+<li><b>Benefits:</b></li>
+<li>Education planning</li>
+<li>Secure child future</li>
+<li>Life cover for parent</li>
+<li>Financial safety</li>
 </ul>
+
 <a class="btn" href="https://wa.me/918928069993">Enquire Now</a>
 </div>
 </div>
 
+<!-- RETIREMENT -->
 <div class="card" onclick="toggleDetails('retirement')">
 <h3>Retirement Plans</h3>
 <p>Click to view full details</p>
 
 <div id="retirement" class="details">
 <ul>
-<li>Guaranteed Income Option</li>
-<li>Long Term Pension Planning</li>
-<li>Tax Saving Benefits</li>
-<li>Financial Freedom After 60</li>
+<li><b>Retirement plan kya hai?</b> Ye plan retirement ke baad regular income provide karta hai.</li>
+
+<li><b>Example:</b> Agar ₹5000 monthly 20 saal invest kare to retirement ke baad ₹25k-40k monthly income mil sakti hai.</li>
+
+<li><b>Benefits:</b></li>
+<li>Retirement income</li>
+<li>Financial independence</li>
+<li>Tax benefits</li>
+<li>Secure future after 60</li>
 </ul>
+
 <a class="btn" href="https://wa.me/918928069993">Enquire Now</a>
 </div>
 </div>
@@ -263,8 +262,8 @@ Policy term: 25 साल
 </footer>
 
 </body>
-
 </html>
+
 
 
 
